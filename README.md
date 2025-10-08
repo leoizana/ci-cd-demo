@@ -14,7 +14,7 @@ Elle sert à lancer le test, dans le cas actuel, elle ne renvoie qu'un simple me
 
 Parce qu'elle permet à faire des test de code JavaScript
 - Que se passe-t-il si un test échoue ?
-
+`
  FAIL  __tests__/index.test.js
   × addition de 2 + 3 = 5 (14 ms)
 
