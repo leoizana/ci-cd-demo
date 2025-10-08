@@ -1,10 +1,17 @@
-name: CI Test
+name: Node CI
 
 on: [push]
 
 jobs:
-  hello:
+  test:
     runs-on: ubuntu-latest
     steps:
-      - name: Premier Test 
-        run: echo "Test du premier Workflow"
+      - uses: actions/checkout@v4
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - name: Install dependencies
+        run: npm ci
+      - name: Run Jest tests
+        run: npm test
